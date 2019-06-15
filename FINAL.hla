@@ -1,0 +1,16 @@
+/*-----------------------------------------------
+	Assignment 2		rotate 13
+	Jacob Byerline		xack03
+-----------------------------------------------*/
+program asst2;
+#include ("stdlib.hhf")
+#include ("chars.hhf")
+#include ("stdin.hhf")
+static i : byte;
+
+begin asst2;
+	mov(10, i) ;
+	mov(13, al) ;
+	xor(i, al) ;	stdout.put(al) ;		stdout.put(i) ;
+
+	end asst2;

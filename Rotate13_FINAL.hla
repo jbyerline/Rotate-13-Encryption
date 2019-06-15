@@ -1,0 +1,39 @@
+/*-----------------------------------------------
+	Assignment 2		rotate 13
+	Jacob Byerline		xack03
+-----------------------------------------------*/
+program asst2;
+#include ("stdlib.hhf")
+#include ("chars.hhf")
+#include ("stdin.hhf")
+static c : char;
+	count : uns32[255];
+
+begin asst2;
+	stdin.read(c,1);
+	forever;
+		if(c in 'a' .. 'z') then			
+
+		add(13, c);
+		
+		elseif(c in 'A' .. 'Z') then
+
+		add(45,c);
+
+		endif;		
+		if( c > 122) then
+		
+		sub(26, c);
+
+		endif;
+
+		stdout.putc(c);
+		
+		stdin.read(c, 1);
+		cmp(eax, 0);
+		if(@z) then 
+			stdout.newln();
+			raise(ex.EndOfFile);
+		endif;
+	endfor;
+	end asst2;
